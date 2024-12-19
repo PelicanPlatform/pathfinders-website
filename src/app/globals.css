@@ -5,7 +5,7 @@ body {
 
 body {
   font-family: "Poppins", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 main {
@@ -13,7 +13,6 @@ main {
   max-width: 1200px;
 
   margin: 0px auto 0px auto;
-  padding: 25px;
   border-end-end-radius: 20px;
   border-end-start-radius: 20px;
 }
@@ -47,7 +46,6 @@ a {
     max-width: 1200px;
 
     margin: 0px auto 0px auto;
-    padding: 8px;
     border-end-end-radius: 20px;
     border-end-start-radius: 20px;
   }
@@ -60,7 +58,6 @@ a {
     max-width: 1200px;
 
     margin: 0px auto 0px auto;
-    padding: 15px;
     border-end-end-radius: 20px;
     border-end-start-radius: 20px;
   }

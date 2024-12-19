@@ -1,7 +1,7 @@
+import Header from "@/components/Header";
+import { ThemeProviderClient } from "@/theme";
 import type { Metadata } from "next";
 import "./globals.css";
-import Header from "@/components/Header";
-import {ThemeProviderClient} from "@/theme";
 
 export const metadata: Metadata = {
   title: "Pathfinders",
@@ -19,7 +19,7 @@ export default function RootLayout({
       <ThemeProviderClient>
         <body>
           <Header />
-          <main>{children}</main>
+          {children}
         </body>
       </ThemeProviderClient>
     </html>
