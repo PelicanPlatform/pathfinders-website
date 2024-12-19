@@ -1,6 +1,6 @@
 'use client'
 
-import {createTheme, responsiveFontSizes, ThemeProvider} from "@mui/material";
+import {createTheme, responsiveFontSizes, Shadows, ThemeProvider} from "@mui/material";
 import {FC} from "react";
 import {Poppins} from "next/font/google";
 
@@ -11,7 +11,10 @@ const poppins = Poppins({
 let theme = createTheme({
 	palette: {
 		primary: {
-			main: "#008000",
+			main: "#cfe4ff",
+		},
+		secondary: {
+			main: "#5fafff",
 		}
 	},
 	typography: {
@@ -50,6 +53,13 @@ let theme = createTheme({
 			defaultProps: {}
 		},
 	},
+	shadows: [
+		"none",
+		"0px 0px 25px #acbee7",
+		"0px 0px 50px #acbee7",
+		"0px 0px 75px #acbee7",
+		"0px 0px 100px #acbee7",
+	].concat(Array(20).fill("none")) as Shadows,
 });
 
 theme = responsiveFontSizes(theme, {factor: 3})
