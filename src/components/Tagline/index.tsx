@@ -1,5 +1,5 @@
-import {Box, SxProps} from "@mui/material";
-import {Grid} from "@mui/system";
+import { Box, SxProps } from "@mui/material";
+import { Grid } from "@mui/system";
 import { CSSProperties } from "react";
 import Balancer from "react-wrap-balancer";
 import Graphic from "./Graphic";
@@ -47,8 +47,8 @@ const Tagline = () => {
     <Box sx={taglineContainer}>
       <Graphic />
       <Box sx={text}>
-        <Grid container justifyContent={'center'} pb={1}>
-          <Grid size={{xs: 12, md: 10, lg: 8}}>
+        <Grid container justifyContent={"center"} pb={1}>
+          <Grid size={{ xs: 12, md: 10, lg: 8 }}>
             <span style={taglineText}>
               <Balancer>
                 Advancing Earth Science and Innovating Data Access and Sharing

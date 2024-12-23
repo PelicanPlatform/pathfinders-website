@@ -16,7 +16,7 @@ const graphicContainer: CSSProperties = {
   width: "100%",
   height: "100%",
 
-  opacity: ".2"
+  opacity: ".2",
 };
 
 const leftEndcap: SxProps = {

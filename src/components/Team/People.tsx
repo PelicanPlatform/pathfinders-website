@@ -1,6 +1,6 @@
 import { Box, SxProps } from "@mui/material";
 import PersonCard from "./PersonCard";
-import {Grid} from "@mui/system";
+import { Grid } from "@mui/system";
 
 const container: SxProps = {
   display: "flex",
@@ -50,18 +50,23 @@ const People = () => {
   return (
     <Box sx={container}>
       <Grid container justifyContent={"center"} spacing={2}>
-        {pis.sort((a, b) => a.name.localeCompare(b.name))
-            .map((pi, i) => (
-          <Grid key={i} size={{xs: 6, sm: 4, md: 2, lg: 2}} sx={{display: "flex"}}>
-            <PersonCard
-              src={pi.src}
-              alt={pi.alt}
-              name={pi.name}
-              title={pi.title}
-              project={pi.project}
-            />
-          </Grid>
-        ))}
+        {pis
+          .sort((a, b) => a.name.localeCompare(b.name))
+          .map((pi, i) => (
+            <Grid
+              key={i}
+              size={{ xs: 6, sm: 4, md: 2, lg: 2 }}
+              sx={{ display: "flex" }}
+            >
+              <PersonCard
+                src={pi.src}
+                alt={pi.alt}
+                name={pi.name}
+                title={pi.title}
+                project={pi.project}
+              />
+            </Grid>
+          ))}
       </Grid>
     </Box>
   );
