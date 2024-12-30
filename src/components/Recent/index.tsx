@@ -2,12 +2,16 @@ import { Box, SxProps } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
 import { CSSProperties } from "react";
+import {
+  getLastMeeting,
+  getLastMeetingNotes,
+  getNextMeeting,
+} from "./meetings";
 
 const MEETING_INFO = {
-  lastMeeting: "12/20/2024",
-  nextMeeting: "01/03/2025", // placeholder for now
-  meetingNotesLink:
-    "https://docs.google.com/document/d/1NF2NQfw_qx4RGfV1dM2tZOGCB6gQSxi12hI5JTfgxv8/edit?tab=t.0#heading=h.2ez3c1bebngo",
+  lastMeeting: getLastMeeting(),
+  nextMeeting: getNextMeeting(),
+  meetingNotesLink: getLastMeetingNotes(),
 };
 
 const NEWS_ARTICLE = {
@@ -57,17 +61,24 @@ const image: CSSProperties = {
 const meetingContainer: SxProps = {
   display: "flex",
   flexDirection: "column",
-  justifyContent: "space-between",
+  justifyContent: "space-around",
   flexShrink: 0,
+  textAlign: "center",
+
   bgcolor: "primary.main",
   borderRadius: "10px",
   padding: "10px",
-  boxShadow: 0,
+  width: {
+    xs: "300px",
+    md: "150px",
+  },
+  maxWidth: "100%",
+  margin: "0 auto",
+  height: "fit-content",
 };
 
 const lastMeetingLink: SxProps = {
   display: "block",
-  textAlign: "center",
   fontStyle: "italic",
   textDecoration: "underline",
 };
@@ -100,11 +111,15 @@ const News = () => {
         <Box>
           <h4>Last Meeting</h4>
           <span style={{ display: "block" }}>{MEETING_INFO.lastMeeting}</span>
-          <Box sx={lastMeetingLink}>
-            <Link href={MEETING_INFO.meetingNotesLink} target="_blank">
-              Meeting Notes
-            </Link>
-          </Box>
+          {MEETING_INFO.meetingNotesLink === "" ? (
+            <></>
+          ) : (
+            <Box sx={lastMeetingLink}>
+              <Link href={MEETING_INFO.meetingNotesLink} target="_blank">
+                Meeting Notes
+              </Link>
+            </Box>
+          )}
         </Box>
 
         <Box>

@@ -1,4 +1,4 @@
-import News from "@/components/News";
+import Recent from "@/components/Recent";
 import PartnerList from "@/components/PartnerList";
 import Strategies from "@/components/Strategies";
 import Tagline from "@/components/Tagline";
@@ -18,7 +18,7 @@ const Home = () => {
     <div>
       <Tagline />
       <Box component="main" sx={mainContainer}>
-        <News />
+        <Recent />
         <PartnerList />
         <Strategies />
         <Team />
