@@ -3,6 +3,7 @@ import Image from "next/image";
 import AwardLink from "../AwardLink";
 import { CSSProperties, ReactNode } from "react";
 import Link from "next/link";
+import { Launch } from "@mui/icons-material";
 
 const itemContainer: SxProps = {
   bgcolor: "primary.main",
@@ -53,7 +54,6 @@ type PartnerProps = PartnerImage & {
   name: string;
   nameLink?: string;
   awardId: string;
-  text: string;
   containerStyles?: SxProps;
 };
 

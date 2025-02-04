@@ -24,12 +24,6 @@ const grid: SxProps = {
 };
 
 const PartnerList = () => {
-  const loremIpsum = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-  non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec,
-  ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa,
-  varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy
-  molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.`;
-
   return (
     <Box sx={grid}>
       <Partner
@@ -40,7 +34,6 @@ const PartnerList = () => {
         width={518}
         height={142}
         awardId="1852977"
-        text={loremIpsum}
       />
       <Partner
         area="b"
@@ -51,7 +44,6 @@ const PartnerList = () => {
         width={1000 * 0.5}
         height={332 * 0.5}
         awardId="2324718"
-        text={loremIpsum}
       />
       <Partner
         area="c"
@@ -61,13 +53,11 @@ const PartnerList = () => {
         width={221.7}
         height={102.8}
         awardId="2322308"
-        text={loremIpsum}
       />
       <Partner
         area="d"
         name="Sonar AI"
         awardId="2311843"
-        text={loremIpsum}
         image={<SonarAILogo />}
       />
       <Partner
@@ -78,7 +68,6 @@ const PartnerList = () => {
         width={500}
         height={178}
         awardId="2324718"
-        text={loremIpsum}
         containerStyles={{
           bgcolor: "secondary.main",
         }}
