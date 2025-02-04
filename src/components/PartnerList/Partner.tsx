@@ -2,6 +2,7 @@ import { Box, SxProps } from "@mui/material";
 import Image from "next/image";
 import AwardLink from "../AwardLink";
 import { CSSProperties, ReactNode } from "react";
+import Link from "next/link";
 
 const itemContainer: SxProps = {
   bgcolor: "primary.main",
@@ -31,31 +32,37 @@ const nameAndAward: CSSProperties = {
   flexShrink: 0,
 };
 
-type PartnerProps = (
+const nameLink: CSSProperties = {
+  fontStyle: "italic",
+  textDecoration: "underline",
+};
+
+type PartnerImage =
   | {
-      area: string;
       src: string;
       alt: string;
-      name: string;
       width: number;
       height: number;
-      awardId: string;
-      text: string;
     }
   | {
-      area: string;
       image: ReactNode;
-      name: string;
-      awardId: string;
-      text: string;
-    }
-) & {
-  itemStyles?: SxProps;
+    };
+
+type PartnerProps = PartnerImage & {
+  area: string;
+  name: string;
+  nameLink?: string;
+  awardId: string;
+  text: string;
+  containerStyles?: SxProps;
 };
 
 const Partner = (props: PartnerProps) => {
   return (
-    <Box sx={{ ...itemContainer, ...props.itemStyles }} gridArea={props.area}>
+    <Box
+      sx={{ ...itemContainer, ...props.containerStyles }}
+      gridArea={props.area}
+    >
       {"image" in props ? (
         props.image
       ) : (
@@ -68,7 +75,14 @@ const Partner = (props: PartnerProps) => {
         />
       )}
       <span style={nameAndAward}>
-        {props.name} &mdash; <AwardLink id={props.awardId} />
+        {props.nameLink ? (
+          <Link href={props.nameLink} target="_blank" style={nameLink}>
+            {props.name}
+          </Link>
+        ) : (
+          <span>{props.name}</span>
+        )}{" "}
+        &mdash; <AwardLink id={props.awardId} />
       </span>
     </Box>
   );

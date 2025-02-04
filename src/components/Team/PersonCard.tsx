@@ -22,7 +22,7 @@ const headshot: CSSProperties = {
   objectFit: "cover",
   aspectRatio: "1/1",
   width: "100%",
-  height: "auto"
+  height: "auto",
 };
 
 const nameStyle: CSSProperties = {
@@ -36,7 +36,7 @@ const textSpacer: SxProps = {
 
 const text: CSSProperties = {
   display: "block",
-  textAlign: "center"
+  textAlign: "center",
 };
 
 type Props = {
@@ -55,7 +55,7 @@ const PersonCard = ({
   name,
   project,
   width = 200,
-  height = 200
+  height = 200,
 }: Props) => {
   return (
     <Box sx={card}>

@@ -47,6 +47,7 @@ const PartnerList = () => {
         src="/images/logos/pism_logo.png"
         alt="PISM Logo"
         name="PISM"
+        nameLink="https://www.pism.io/"
         width={1000 * 0.5}
         height={332 * 0.5}
         awardId="2324718"
@@ -78,7 +79,7 @@ const PartnerList = () => {
         height={178}
         awardId="2324718"
         text={loremIpsum}
-        itemStyles={{
+        containerStyles={{
           bgcolor: "secondary.main",
         }}
       />
