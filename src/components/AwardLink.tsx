@@ -18,7 +18,7 @@ const AwardLink = ({ name, id }: AwardLinkProps) => {
       href={`https://www.nsf.gov/awardsearch/showAward?AWD_ID=${id}`}
       target="_blank"
     >
-      {name ?? id}
+      {name ?? "#" + id}
     </Link>
   );
 };
