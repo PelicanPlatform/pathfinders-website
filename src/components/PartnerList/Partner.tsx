@@ -69,6 +69,7 @@ const Partner = (props: PartnerProps) => {
         </span>
 
         <MUILink
+          width="fit-content"
           component={Link}
           href={props.aboutLink}
           target="_blank"
