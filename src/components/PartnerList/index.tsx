@@ -77,7 +77,7 @@ const PartnerList = () => {
         name="Pelican"
         width={500}
         height={178}
-        awardId="2324718"
+        awardId="2331480"
         text={loremIpsum}
         containerStyles={{
           bgcolor: "secondary.main",
