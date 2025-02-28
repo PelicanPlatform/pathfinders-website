@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "tnext dev",
+    "dev": "next dev",
     "build": "tsx ./.github/scripts/gen-data/genData.ts && next build",
     "start": "next start",
     "lint": "next lint",
