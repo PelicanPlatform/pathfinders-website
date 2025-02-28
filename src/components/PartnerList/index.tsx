@@ -69,7 +69,7 @@ const PartnerList = () => {
         width={400 / 2}
         height={395 / 2}
         name="Pelican"
-        awardId="2324718"
+        awardId="2331480"
         containerSx={{
           display: "flex",
           bgcolor: "secondary.main",
