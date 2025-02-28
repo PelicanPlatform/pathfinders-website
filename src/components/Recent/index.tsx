@@ -88,7 +88,7 @@ const News = () => {
           <Image
             style={image}
             src={NEWS_ARTICLE.image}
-            alt="News"
+            alt="News Image"
             width={NEWS_ARTICLE.imageWidth}
             height={NEWS_ARTICLE.imageHeight}
           />

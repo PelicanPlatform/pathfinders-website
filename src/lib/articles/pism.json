@@ -1,0 +1,10 @@
+{
+  "articles": [
+    {
+      "title": "This is an example article for the Pathfinders website",
+      "link": "google.com",
+      "author": "John Doe",
+      "date": "2024-02-13"
+    }
+  ]
+}

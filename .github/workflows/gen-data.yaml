@@ -1,0 +1,27 @@
+# Runs the typescript script to generate various data files
+
+name: Generate Data
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  push:
+    branches:
+      - main
+jobs:
+  staff:
+    name: Generate Data
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install Dependencies
+        run: npm install
+      - name: Run Data Script
+        run: npm run gen-data
+      - name: Commit Changes
+        uses: stefanzweifel/git-auto-commit-action@v4
