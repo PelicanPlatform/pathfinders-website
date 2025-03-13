@@ -60,7 +60,7 @@ const PartnerList = () => {
         name="Sonar AI"
         awardId="2311843"
         image={<SonarAILogo />}
-        aboutLink="/sonar-ai"
+        aboutLink="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2311843"
       />
       <Partner
         area="e"
