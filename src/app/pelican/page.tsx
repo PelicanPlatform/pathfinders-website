@@ -1,9 +1,16 @@
-import { getArticles } from "@/lib/articles";
 import { Staff, StaffCard } from "@chtc/web-components";
-import { Box, Container, Grid, Typography } from "@mui/material";
+import {
+  Box,
+  Divider,
+  Grid2 as Grid,
+  List,
+  ListItem,
+  Typography,
+} from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
 
+import pelicanArticles from "@/lib/articles/pelican.json";
 import pelicanTeam from "@/lib/team/pelican.json";
 
 const PelicanAboutPage = () => {
@@ -16,50 +23,57 @@ const PelicanAboutPage = () => {
 
   return (
     <main>
-      <Box width="100%" display="flex" justifyContent="center">
-        <Image
-          width={500 / 1.5}
-          height={178 / 1.5}
-          src="/images/logos/pelican_full_logo.png"
-          alt="Pelican Logo"
-        />
+      <Box flexDirection="column" display="flex" alignItems="center">
+        <Box my="20px">
+          <Image
+            width={500 / 1.5}
+            height={178 / 1.5}
+            src="/images/logos/pelican_full_logo.png"
+            alt="Pelican Logo"
+          />
+        </Box>
+        <Box display="flex" flexDirection="column">
+          <Typography variant="h4">
+            Software Designed to Make Data Distribution Easy
+          </Typography>
+          <List sx={{ listStyleType: "disc", paddingLeft: "20px" }}>
+            {bullets.map((bullet, i) => (
+              <ListItem
+                key={i}
+                sx={{ maxWidth: "100ch", display: "list-item" }}
+              >
+                {bullet}
+              </ListItem>
+            ))}
+          </List>
+        </Box>
       </Box>
 
-      <Typography variant="h4" py="15px">
-        Software Designed to Make Data Distribution Easy
-      </Typography>
+      <Divider sx={{ width: "100%" }} />
 
-      <Box component="ul" pl="40px">
-        {bullets.map((bullet, i) => (
-          <li key={i} style={{ paddingBottom: "5px" }}>
-            {bullet}
-          </li>
-        ))}
-      </Box>
-
-      <hr />
-
-      <Typography variant="h4" pb="10px">
+      <Typography variant="h4" pt="20px" pb="10px">
         Pelican in the News
       </Typography>
 
-      <Box display="flex" flexWrap="wrap">
-        {getArticles("pelican").map((article, i) => (
-          <Box
-            display="flex"
-            flexDirection="column"
-            justifyContent="space-between"
-            borderRadius="10px"
-            bgcolor="primary.main"
-            width="max-content"
-            padding="10px"
-            margin="10px"
-            maxWidth="40%"
+      <Grid container spacing={2} justifyContent="center">
+        {pelicanArticles.map((article, i) => (
+          <Grid
             key={i}
+            size={{ xs: 12, sm: 6 }}
+            height="1fr"
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "space-between",
+              borderRadius: "10px",
+              bgcolor: "primary.light",
+              padding: "10px",
+            }}
           >
             <Box
               component="p"
               fontWeight="bold"
+              mb="10px"
               sx={{ textDecoration: "underline" }}
             >
               <Link href={article.link} target="_blank">
@@ -67,18 +81,18 @@ const PelicanAboutPage = () => {
               </Link>
             </Box>
             <Box width="100%" display="flex" justifyContent="space-between">
-              <Box component="small" mr="20px">
+              <Box component="small" mr={"20px"}>
                 {article.author}
               </Box>
               <small>{article.date}</small>
             </Box>
-          </Box>
+          </Grid>
         ))}
-      </Box>
+      </Grid>
 
-      <hr />
+      <Divider sx={{ mt: "20px", width: "100%" }} />
 
-      <Typography variant="h4" pb="10px">
+      <Typography variant="h4" pt="20px" pb="10px">
         Team
       </Typography>
 
@@ -87,7 +101,7 @@ const PelicanAboutPage = () => {
   );
 };
 
-const TeamMembers = async () => {
+const TeamMembers = () => {
   // have to cast here because the "status" field is a string not a union
   const team = pelicanTeam as Staff[];
 
@@ -100,36 +114,40 @@ const TeamMembers = async () => {
     )
     .sort((a, b) => (a.pelican?.weight ?? 0) - (b.pelican?.weight ?? 0));
 
+  // filter out past members, those not in pelican, and those who are promoted (as they are already displayed)
+  // also sort by weight
   const currentStaff = team
     .filter(
       (member) =>
-        member.organizations.includes("pelican") && member.status !== "Past"
+        member.organizations.includes("pelican") &&
+        member.status !== "Past" &&
+        !member.promoted
     )
     .sort((a, b) => (a.pelican?.weight ?? 0) - (b.pelican?.weight ?? 0));
 
   return (
-    <Box pt={6}>
-      <Container maxWidth={"xl"}>
-        <Grid container justifyContent={"center"}>
-          <Grid item xs={12} sm={6} lg={5}>
-            <StaffCard type="leader" {...promoted[0]} />
+    <Box pt={3}>
+      <Grid container justifyContent="center">
+        <Grid size={{ xs: 12, sm: 6 }}>
+          <StaffCard type="leader" {...promoted[0]} />
+        </Grid>
+      </Grid>
+      <Grid container justifyContent="center">
+        {promoted.slice(1, 3).map((member) => {
+          return (
+            <Grid key={member.name} size={{ xs: 12, sm: 6 }}>
+              <StaffCard type="leader" {...member} />
+            </Grid>
+          );
+        })}
+      </Grid>
+      <Grid container spacing={2} justifyContent="center">
+        {currentStaff.map((member) => (
+          <Grid key={member.name} size={{ xs: 12, md: 6 }}>
+            <StaffCard type="staff" {...member} />
           </Grid>
-        </Grid>
-        <Grid container justifyContent={"center"}>
-          {promoted.slice(1, 3).map((member) => {
-            return (
-              <Grid key={member.name} item xs={12} sm={6} lg={5}>
-                <StaffCard type="leader" {...member} />
-              </Grid>
-            );
-          })}
-        </Grid>
-        <Grid container justifyContent={"center"}>
-          {currentStaff.map((member) => (
-            <StaffCard type="staff" key={member.name} {...member} />
-          ))}
-        </Grid>
-      </Container>
+        ))}
+      </Grid>
     </Box>
   );
 };
