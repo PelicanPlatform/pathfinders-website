@@ -1,8 +1,9 @@
 const SKIP_DAYS = new Set(["12/27/2024"]);
 
 const MEETING_NOTES: Record<string, string> = {
-  "12/20/2024": "https://docs.google.com/document/d/1NF2NQfw_qx4RGfV1dM2tZOGCB6gQSxi12hI5JTfgxv8/edit?tab=t.0#heading=h.2ez3c1bebngo"
-}
+  "12/20/2024":
+    "https://docs.google.com/document/d/1NF2NQfw_qx4RGfV1dM2tZOGCB6gQSxi12hI5JTfgxv8/edit?tab=t.0#heading=h.2ez3c1bebngo",
+};
 
 /**
  * Gets the last meetings
@@ -60,9 +61,7 @@ export function getNextMeeting(date?: Date): string {
   // calculate next friday (including today)
   const dayOfTheWeek = date.getDay();
   const dayOffset = fridayOffset(dayOfTheWeek)[1];
-  const nextFriday = new Date(
-    date.getTime() + 1000 * 60 * 60 * 24 * dayOffset
-  );
+  const nextFriday = new Date(date.getTime() + 1000 * 60 * 60 * 24 * dayOffset);
 
   const dateStr = nextFriday.toLocaleString("en-US", {
     month: "numeric",
@@ -83,27 +82,27 @@ export function getNextMeeting(date?: Date): string {
 /**
  * Gets the offset to the previous and next friday, depending on the current
  * day of week.
- * 
+ *
  * @param dayOfWeek day of the week, ranging from 0 to 6
  * @returns a tuple containing `[(day offset to last friday), (day offset to next friday)]`
  */
 function fridayOffset(dayOfWeek: number): [number, number] {
   switch (dayOfWeek) {
-  case 0:
-    return [-2, 5];
-  case 1:
-    return [-3, 4];
-  case 2:
-    return [-4, 3];
-  case 3:
-    return [-5, 2];
-  case 4:
-    return [-6, 1];
-  case 5:
-    return [0, 0];
-  case 6:
-    return [-1, 6];
-  default:
-    throw new RangeError("dayOfWeek is not valid day of week")
+    case 0:
+      return [-2, 5];
+    case 1:
+      return [-3, 4];
+    case 2:
+      return [-4, 3];
+    case 3:
+      return [-5, 2];
+    case 4:
+      return [-6, 1];
+    case 5:
+      return [0, 0];
+    case 6:
+      return [-1, 6];
+    default:
+      throw new RangeError("dayOfWeek is not valid day of week");
   }
 }

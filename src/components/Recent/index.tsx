@@ -67,11 +67,8 @@ const meetingContainer: SxProps = {
 
   bgcolor: "primary.main",
   borderRadius: "10px",
-  padding: "10px",
-  width: {
-    xs: "300px",
-    md: "150px",
-  },
+  padding: "15px",
+  width: "max-content",
   maxWidth: "100%",
   margin: "0 auto",
   height: "fit-content",
@@ -91,7 +88,7 @@ const News = () => {
           <Image
             style={image}
             src={NEWS_ARTICLE.image}
-            alt="News"
+            alt="News Image"
             width={NEWS_ARTICLE.imageWidth}
             height={NEWS_ARTICLE.imageHeight}
           />

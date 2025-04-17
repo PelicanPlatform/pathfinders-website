@@ -11,6 +11,7 @@ body {
 main {
   min-width: 30%;
   max-width: 1200px;
+  padding: 25px;
 
   margin: 0px auto 0px auto;
   border-end-end-radius: 20px;
@@ -22,7 +23,7 @@ hr {
   margin: 15px auto;
   padding: 2px;
 
-  border-top: 2px dashed #acbee7ff;
+  border-top: 1.5px dashed #acbee7ff;
   border-left: none;
   border-right: none;
   border-bottom: none;
@@ -44,6 +45,7 @@ a {
   main {
     min-width: 30%;
     max-width: 1200px;
+    padding: 8px;
 
     margin: 0px auto 0px auto;
     border-end-end-radius: 20px;
@@ -56,6 +58,7 @@ a {
   main {
     min-width: 30%;
     max-width: 1200px;
+    padding: 15px;
 
     margin: 0px auto 0px auto;
     border-end-end-radius: 20px;

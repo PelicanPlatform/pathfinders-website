@@ -1,0 +1,403 @@
+[
+  {
+    "name": "Alexander Tuna",
+    "image": "https://chtc.github.io/staff-list/images/alex_tuna.jpg",
+    "title": "Computational Data Scientist and Researcher",
+    "status": "Staff",
+    "institution": "University of California-San Diego",
+    "organizations": [
+      "pelican"
+    ]
+  },
+  {
+    "image": "https://chtc.github.io/staff-list/images/alja_tadel.jpg",
+    "institution": "University of California San Diego",
+    "title": "Analytic Programmer",
+    "name": "Alja Mrak Tadel",
+    "status": "Staff",
+    "website": null,
+    "pelican": {
+      "weight": 9
+    },
+    "organizations": [
+      "pelican"
+    ],
+    "weight": 9
+  },
+  {
+    "image": "https://chtc.github.io/staff-list/images/andrew_owen.jpg",
+    "institution": "University of Wisconsin-Madison",
+    "title": "Research Computing Facilitator",
+    "is_facilitator": 1,
+    "name": "Andrew Owen",
+    "status": "Staff",
+    "website": null,
+    "organizations": [
+      "path",
+      "chtc",
+      "osg",
+      "pelican"
+    ]
+  },
+  {
+    "image": "https://chtc.github.io/staff-list/images/austin_schneider.jpg",
+    "institution": "Morgridge Institute For Research",
+    "title": "Student Web Developer",
+    "name": "Austin Schneider",
+    "status": "Student",
+    "website": "https://austinschneider.dev",
+    "organizations": [
+      "path",
+      "chtc",
+      "osg",
+      "pelican"
+    ]
+  },
+  {
+    "image": "https://chtc.github.io/staff-list/images/brian_aydemir.jpeg",
+    "institution": "University of Wisconsin-Madison",
+    "title": "Systems Integration Developer",
+    "name": "Brian Aydemir",
+    "status": "Staff",
+    "website": null,
+    "organizations": [
+      "chtc",
+      "pelican"
+    ]
+  },
+  {
+    "name": "Brian Bockelman",
+    "date": "2018-11-19T00:47:58.000Z",
+    "draft": false,
+    "image": "https://chtc.github.io/staff-list/images/brian_bockelman.jpg",
+    "title": "Principal Investigator",
+    "institution": "Morgridge Institute for Research",
+    "promoted": true,
+    "weight": 1,
+    "description": "Bockelman is an Investigator at the Morgridge Institute for Research and co-lead of the FoCaS area.",
+    "status": "Leadership",
+    "osg": {
+      "title": "OSG Technology Lead",
+      "website": "https://opensciencegrid.org",
+      "promoted": true,
+      "weight": 3
+    },
+    "pelican": {
+      "title": "Principal Investigator",
+      "weight": 1
+    },
+    "organizations": [
+      "path",
+      "chtc",
+      "osg",
+      "pelican"
+    ]
+  },
+  {
+    "name": "Brian Lin",
+    "date": "2018-11-19T00:47:58.000Z",
+    "draft": false,
+    "image": "https://chtc.github.io/staff-list/images/brian_lin.jpg",
+    "title": "OSG Software Area Coordinator",
+    "institution": "University of Wisconsin–Madison",
+    "linkedinurl": "",
+    "weight": 13,
+    "status": "Staff",
+    "chtc": {
+      "title": "OSG Software Area Coordinator"
+    },
+    "osg": {
+      "title": "Software Area Coordinator"
+    },
+    "pelican": {
+      "title": "OSG Software Area Coordinator",
+      "weight": 13
+    },
+    "organizations": [
+      "path",
+      "chtc",
+      "osg",
+      "pelican"
+    ]
+  },
+  {
+    "name": "Cannon Lock",
+    "draft": false,
+    "image": "https://chtc.github.io/staff-list/images/cannon_lock.jpg",
+    "title": "Web Developer",
+    "institution": "Morgridge Institute for Research",
+    "status": "Staff",
+    "linkedinurl": "",
+    "weight": 6,
+    "pelican": {
+      "title": "Web Developer",
+      "weight": 6
+    },
+    "organizations": [
+      "path",
+      "chtc",
+      "osg",
+      "pelican"
+    ]
+  },
+  {
+    "name": "Christina Koch",
+    "date": "2018-11-19T00:47:58.000Z",
+    "draft": false,
+    "image": "https://chtc.github.io/staff-list/images/christina_koch.jpg",
+    "title": "Lead Research Computing Facilitator",
+    "institution": "University of Wisconsin - Madison",
+    "website": "https://www.cs.wisc.edu/staff/koch-christina/",
+    "is_facilitator": 1,
+    "status": "Staff",
+    "linkedinurl": "",
+    "weight": 14,
+    "chtc": {
+      "title": "Lead Research Computing Facilitator"
+    },
+    "pelican": {
+      "title": "Lead Research Computing Facilitator",
+      "weight": 14
+    },
+    "osg": {
+      "title": "OSG Research Facilitation Lead",
+      "promoted": true,
+      "weight": 7
+    },
+    "organizations": [
+      "path",
+      "chtc",
+      "osg",
+      "pelican"
+    ]
+  },
+  {
+    "image": "https://chtc.github.io/staff-list/images/emma_turetsky.jpg",
+    "institution": "Morgridge Institute for Research",
+    "title": "Research Software Engineer",
+    "name": "Emma Turetsky",
+    "status": "Staff",
+    "pelican": {
+      "weight": 7
+    },
+    "organizations": [
+      "chtc",
+      "pelican"
+    ],
+    "weight": 7
+  },
+  {
+    "name": "Frank Wuerthwein",
+    "date": "2018-11-19T00:47:58.000Z",
+    "draft": false,
+    "image": "https://chtc.github.io/staff-list/images/frank_wuerthwein.jpg",
+    "title": "Co-Principal Investigator",
+    "website": null,
+    "institution": "University of California San Diego",
+    "promoted": true,
+    "weight": 3,
+    "description": "Wuerthwein is a Professor of Physics at UCSD and the Executive Director of the OSG.",
+    "pelican": {
+      "title": "Co-Principal Investigator",
+      "weight": 3
+    },
+    "osg": {
+      "title": "OSG Executive Director",
+      "promoted": true,
+      "weight": 2
+    },
+    "organizations": [
+      "path",
+      "osg",
+      "pelican"
+    ]
+  },
+  {
+    "image": "https://chtc.github.io/staff-list/images/george_zeng.jpg",
+    "institution": "Morgridge Institute For Research",
+    "title": "Student Web Developer",
+    "name": "George Zeng",
+    "status": "Student",
+    "website": null,
+    "organizations": [
+      "path",
+      "chtc",
+      "osg",
+      "pelican"
+    ]
+  },
+  {
+    "image": "https://chtc.github.io/staff-list/images/howard_zhong.png",
+    "institution": "Morgridge Institute for Research",
+    "title": "Research Software Engineer",
+    "name": "Howard Zhong",
+    "status": "Staff",
+    "pelican": {
+      "weight": 7
+    },
+    "organizations": [
+      "chtc",
+      "pelican"
+    ],
+    "weight": 7
+  },
+  {
+    "image": "https://chtc.github.io/staff-list/images/justin_hiemstra.jpg",
+    "institution": "Morgridge Institute For Research",
+    "title": "Research Software Engineer",
+    "name": "Justin Hiemstra",
+    "status": "Staff",
+    "website": null,
+    "pelican": {
+      "weight": 5
+    },
+    "organizations": [
+      "chtc",
+      "osg",
+      "pelican"
+    ],
+    "weight": 5
+  },
+  {
+    "image": "https://chtc.github.io/staff-list/images/matevz_tadel.jpg",
+    "institution": "University of California San Diego",
+    "title": "Project Scientist",
+    "name": "Matevz Tadel",
+    "status": "Staff",
+    "website": null,
+    "pelican": {
+      "weight": 10
+    },
+    "organizations": [
+      "pelican"
+    ],
+    "weight": 10
+  },
+  {
+    "name": "Mátyás Selmeci",
+    "shortname": "matyasselmeci",
+    "date": "2020-09-18T20:46:09.000Z",
+    "draft": false,
+    "image": "https://chtc.github.io/staff-list/images/matyas_selmeci.jpg",
+    "title": "Software Integration Developer",
+    "institution": "University of Wisconsin–Madison",
+    "status": "Staff",
+    "linkedinurl": "",
+    "weight": 15,
+    "pelican": {
+      "weight": 15
+    },
+    "organizations": [
+      "path",
+      "chtc",
+      "osg",
+      "pelican"
+    ]
+  },
+  {
+    "name": "Miron Livny",
+    "shortname": "miron",
+    "date": "2018-11-19T00:47:58.000Z",
+    "draft": false,
+    "image": "https://chtc.github.io/staff-list/images/miron_livny.png",
+    "title": "Co-Principal Investigator",
+    "website": "https://wid.wisc.edu/people/miron-livny/",
+    "institution": "University of Wisconsin–Madison",
+    "promoted": true,
+    "weight": 2,
+    "status": "Leadership",
+    "description": "Livny is a Professor of Computer Science and the lead of the PATh project.",
+    "chtc": {
+      "title": "Director"
+    },
+    "osg": {
+      "title": "OSG Technical Director and PI",
+      "promoted": true,
+      "weight": 1
+    },
+    "pelican": {
+      "title": "Co-Principal Investigator",
+      "weight": 2
+    },
+    "organizations": [
+      "path",
+      "chtc",
+      "osg",
+      "pelican"
+    ]
+  },
+  {
+    "name": "Patrick Brophy",
+    "title": "Student Research Software Engineer",
+    "institution": "Morgridge Institute for Research",
+    "status": "Student",
+    "organizations": [
+      "chtc",
+      "pelican"
+    ],
+    "image": "https://chtc.github.io/staff-list/images/patrick_brophy.jpg"
+  },
+  {
+    "image": "https://chtc.github.io/staff-list/images/rich_wellner.jpg",
+    "institution": "San Diego Supercomputer Center",
+    "title": "SDx Director",
+    "name": "Rich Wellner",
+    "status": "Staff",
+    "website": null,
+    "pelican": {
+      "weight": 11
+    },
+    "organizations": [
+      "pelican"
+    ],
+    "weight": 11
+  },
+  {
+    "name": "Sarthak Agarwal",
+    "image": "https://chtc.github.io/staff-list/images/sarthak_agarwal.jpg",
+    "title": "Software Engineer",
+    "status": "Staff",
+    "institution": "University of Wisconsin–Madison",
+    "weight": 5,
+    "organizations": [
+      "path",
+      "chtc",
+      "osg",
+      "pelican"
+    ]
+  },
+  {
+    "image": "https://chtc.github.io/staff-list/images/tae_kidd.jpg",
+    "institution": "Morgridge Institute For Research",
+    "title": "Project Manager",
+    "name": "Tae Kidd",
+    "status": "Staff",
+    "website": null,
+    "pelican": {
+      "title": "Project Manager",
+      "weight": 4
+    },
+    "organizations": [
+      "path",
+      "chtc",
+      "pelican"
+    ],
+    "weight": 4
+  },
+  {
+    "name": "William Swanson",
+    "image": "https://chtc.github.io/staff-list/images/william_swanson.jpg",
+    "title": "Research Cyberinfrastructure Specialist",
+    "institution": "University of Wisconsin–Madison",
+    "status": "Staff",
+    "pelican": {
+      "weight": 16
+    },
+    "organizations": [
+      "chtc",
+      "osg",
+      "pelican"
+    ],
+    "weight": 16
+  }
+]

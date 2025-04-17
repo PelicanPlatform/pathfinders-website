@@ -1,4 +1,5 @@
 import { Box, SxProps } from "@mui/material";
+import Link from "next/link";
 
 const headerStyle: SxProps = {
   width: "100%",
@@ -15,7 +16,8 @@ const nameContainerStyle: SxProps = {
 
 const nameStyle: SxProps = {
   fontSize: "24px",
-  marginLeft: "20px",
+  marginLeft: "10px",
+  paddingX: "10px",
   fontWeight: 300,
 };
 
@@ -23,9 +25,9 @@ const Header = () => {
   return (
     <Box component="header" sx={headerStyle}>
       <Box sx={nameContainerStyle}>
-        <Box component="span" sx={nameStyle}>
-          Pathfinders
-        </Box>
+        <Link href="/">
+          <Box sx={nameStyle}>Pathfinders</Box>
+        </Link>
       </Box>
     </Box>
   );
