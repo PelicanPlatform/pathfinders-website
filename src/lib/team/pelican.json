@@ -29,6 +29,7 @@
     "institution": "University of Wisconsin-Madison",
     "title": "Research Computing Facilitator",
     "is_facilitator": 1,
+    "weight": 5,
     "name": "Andrew Owen",
     "status": "Staff",
     "website": null,
@@ -351,20 +352,6 @@
       "pelican"
     ],
     "weight": 11
-  },
-  {
-    "name": "Sarthak Agarwal",
-    "image": "https://chtc.github.io/staff-list/images/sarthak_agarwal.jpg",
-    "title": "Software Engineer",
-    "status": "Staff",
-    "institution": "University of Wisconsin–Madison",
-    "weight": 5,
-    "organizations": [
-      "path",
-      "chtc",
-      "osg",
-      "pelican"
-    ]
   },
   {
     "image": "https://chtc.github.io/staff-list/images/tae_kidd.jpg",
