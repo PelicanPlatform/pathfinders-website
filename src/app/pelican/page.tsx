@@ -26,8 +26,8 @@ const PelicanAboutPage = () => {
       <Box flexDirection="column" display="flex" alignItems="center">
         <Box my="20px">
           <Image
-            width={500 / 1.5}
-            height={178 / 1.5}
+            width={500}
+            height={178}
             src="/images/logos/pelican_full_logo.png"
             alt="Pelican Logo"
           />
